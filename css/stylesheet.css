@@ -1,0 +1,347 @@
+:root{
+--primaryColor:#ff274b;
+--seconderycolor:#f7bcf7;
+--lightColor:#ffffff;
+--bgColor-1:#171a1c;
+--bgColor-2:#22282a;
+--padding:8%;
+}
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: 0;
+}
+html{
+font-family: 'Inter', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Varela Round', sans-serif;
+font-size: 16px;
+color: var(--lightColor);
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    background-color:var(--bgColor-1);
+    display: flex;
+    flex-direction: column;
+}
+span{
+    color: #ff274b;
+}
+h2{
+    font-size: 2.2rem;
+    letter-spacing: 0.12rem;
+    cursor: pointer;
+}
+
+nav{
+    padding-top: 2.8rem;
+    padding-left: var(--padding);
+    padding-left: var(--padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin:0.8rem .5rem;
+}
+nav ul li a{
+    color:var(--lightColor);
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.4s;
+}
+nav ul li a:hover{
+color: var(--primaryColor);
+}
+.btn{
+    background-color: var(--primaryColor);
+    color: var(--lightColor);
+    text-decoration: none;
+    font-weight: bold;
+    padding:0.81rem 1.87rem;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    transition: 0.4s;
+}
+.btn:hover{
+background-color: transparent;
+border: 2px solid var(--primaryColor);
+}
+
+.content{
+flex-grow: 1;
+padding: var(--padding);
+display:flex ;
+align-items: center;
+justify-content: space-between;
+}
+.conteiner_text{
+    position: relative;
+
+}
+h1{
+    font-size: 4.65rem;
+    margin: 1.7rem;
+}
+h3{
+    font-size: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+h4{
+    font-size: 1.25rem;
+    letter-spacing: 0.12rem;
+    color: var(--seconderycolor);
+}
+
+.social{
+    margin-top: 3.5rem;
+
+}
+.social a{
+    text-decoration: none;
+}
+.social img{
+    margin-right: 2rem;
+    width: 2.5rem;
+    transition: 0.4s;
+}
+.social img:hover{
+    transform: scale(1.2);
+}
+
+.home .contener_image{
+    width: 45%;
+    height: 90%;
+    position: relative;
+}
+.home .contener_image img{
+    position: absolute;
+    height: 100%;
+    top: 320px;
+    transform: translateY(-50%);
+    transition: right 1s ,left 1s;
+}
+.myphoto{
+    left: 64px;
+}
+.contener_image:hover .shap{
+right: 6%;
+}
+
+.contener_image:hover .myphoto{
+left: 30%;
+}
+
+/* --------------------------------
+--------------------mnue----------- */
+#mune{
+    display: none;
+    position: relative;
+    appearance: none;
+    border: none;
+    outline: none;
+    background-color: none;
+    cursor: pointer;
+    user-select: none;
+}
+#mune{
+
+    width: 33px;
+    height: 4px;
+    background-color: var(--lightColor);
+    border-radius: 6px;
+    transform-origin: 0 0 ;
+    transform: 0.4s;
+    margin-bottom: 5px;
+}
+
+/* ------------------------ */
+/* medai home mobile */
+@media (max-width:575px) {
+    :root{
+        --padding: 1.5rem;
+    }
+    html{
+        font-size: 12px;
+    }
+    .home .contener_image{
+        display: none;
+    }
+    nav{
+        position:fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 82px;
+        padding-top: 0;
+        background-color: var(--bgColor-1);
+        border-bottom: 1px solid var(--bgColor-2);
+        z-index: 100; 
+    }
+    nav >  a{
+        display: none;
+    }
+    nav ul{
+        display:none ;
+        position: fixed;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        background-color: var(--bgColor-2);
+    }
+    nav ul.is-active{
+        display: block;
+        position: fixed;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        background-color: var(--bgColor-2);
+    }
+        nav ul li{
+        display:block;
+        text-align: center;
+        margin: 50px;
+    } 
+    .social{
+        margin-top: 70px;
+    }
+    .conteiner_text{
+        bottom: 0em;
+    }
+    h3{
+        margin-bottom: 70px;
+    }
+    #mune{
+        display: block;
+    }
+}
+
+
+/* about */
+.about {
+    background-color: var(--bgColor-2);
+    padding: var(--padding);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.about .contener_image{
+    width: 35%;
+}
+.about .contener_image img{
+    width: 100%;
+}
+.about .container_text{
+    width: 35%;
+}
+p{
+    color: var(--seconderycolor);
+    letter-spacing: 1px ;
+    line-height: 1.8rem;
+    font-size: 1rem;
+}
+h5{
+    font-size:1.37rem ;
+    margin-bottom: 1.5rem;
+    letter-spacing: 5px;
+}
+
+/* services  */
+.services {
+background-color: var(--bgColor-1);
+padding: var(--padding);
+
+}
+.text_center{
+    text-align: center;
+}
+
+/* services  */
+.box{
+    display: flex;
+    justify-content:space-between;
+}
+
+.card{
+    width: 300px;
+    background-color:var(--bgColor-2);
+    border-radius: 20px;
+    padding:1rem 2rem;
+    margin-right: 40px;
+    text-align: center;
+}
+.card i{
+    font-size: 3.12rem;
+    text-align: center;
+    color: var(--primaryColor);
+    margin: 2rem;
+}
+/* skill */
+.skill .contener_image{
+    width: 35%;
+    margin-left: 100px;
+}
+.skill .contener_image img{
+    width: 100%;
+}
+.skill {
+    background-color: var(--bgColor-2);
+    padding: var(--padding);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.skill .container_skill{
+    width: 50%;
+}
+.content_skill{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    
+}
+.skils{
+width:100px;
+height: 100px;
+background-color: var(--lightColor);
+border-radius: 50%;
+margin: 0 2rem 2rem 0;
+display: flex;
+align-items:center ;
+justify-content: center;
+}
+.skils img{
+    width: 50%;
+}
+/* footer */
+footer{
+    padding: 2rem var(--padding);
+    background-color: var(--bgColor-1);
+}
+footer .content_footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer .content_footer p{
+    color: var(--lightColor);
+    text-align: center;
+    width: 500px;
+    margin-top: 1rem;
+}
+footer .content_footer .end{
+    color: var(--primaryColor);
+    margin-top: 1rem;
+}
